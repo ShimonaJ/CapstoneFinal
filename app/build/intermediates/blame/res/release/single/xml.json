@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\AndroidApps\\Capstone\\HelpDxApp\\app\\build\\intermediates\\res\\merged\\release\\xml\\authenticator.xml",
+        "source": "D:\\AndroidApps\\Capstone\\HelpDxApp\\app\\src\\main\\res\\xml\\authenticator.xml"
+    },
+    {
+        "merged": "D:\\AndroidApps\\Capstone\\HelpDxApp\\app\\build\\intermediates\\res\\merged\\release\\xml\\widget_info_detail.xml",
+        "source": "D:\\AndroidApps\\Capstone\\HelpDxApp\\app\\src\\main\\res\\xml\\widget_info_detail.xml"
+    },
+    {
+        "merged": "D:\\AndroidApps\\Capstone\\HelpDxApp\\app\\build\\intermediates\\res\\merged\\release\\xml\\syncadapter.xml",
+        "source": "D:\\AndroidApps\\Capstone\\HelpDxApp\\app\\src\\main\\res\\xml\\syncadapter.xml"
+    }
+]
