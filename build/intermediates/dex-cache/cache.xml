@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-auth-8.3.0_f75f99c0e329d35fd5d28f3b0db3f8d762def0c4.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4b8df1b1e51fe14b0e89b3845dc2e215a024a09f">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-identity-8.3.0_d00cd00a5b2a5ff224c4c5054530df1473eea03a.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-vision-8.3.0_ae4bc46bbea884f82ed1b93cb7457a23684d9a82.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\internal_impl-23.2.1_712dbf1d97eb6dffcef4a773527acf55b9a81c78.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.2.1_d80672d97c63a1a7daa886a6b81ac2d7e43cdbcd.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-23.2.1_f61072b79ba1196de6a8ce47e3b26a719154bc68.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.roughike\bottom-bar\1.3.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="febdca0af7e75d9e2d621fd99be05dfbfd2667ed">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.roughike-bottom-bar-1.3.3_ce26e47eefea57138a379803e39ab549667d0f91.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-8.3.0_44f31a6c124c3f237ef03062bc911da5d2893b82.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9aedc597d74c6d77258ce5236e9abff0c3cc65e3">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-wearable-8.3.0_de3b2ebc9cb070bd2e229c07880695d3bc46dc64.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-23.2.1_c593602588c5d57948c426df4b46b2473a1fee3a.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-8.3.0_8df523dea239ee283044ea80de23a4c4f9667a45.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0_1f046b08e38f09775783abda83f1aee454265e1b.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.android.support-mediarouter-v7-22.2.0_9a1570006b226d9a549fb9209476102dd2e0e1a9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Shimona\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\commons-cli-1.2_db2622e73c4698e769479d874514090b753c8698.jar" />
+    </item>
+    <item
+        jar="C:\Users\Shimona\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\support-annotations-23.2.1_d45df7930cdb9615663d78faf4c6fb839fb286a7.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0a1897426566e408a5c20a3d931f77d89771d07f">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-drive-8.3.0_61246b1662e3aef50b553df1234297dea736ea1e.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="697679619b00837e3d09e9988a2e1e2a9009d502">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-fitness-8.3.0_64c7b7a4278d8d478e4024b518d1a6f23e0577a3.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0af4f577b4a21eb9be2a7f52e33b077b67e6d9f8">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-plus-8.3.0_4550529c372ec857f87d2c988011f728e8cfeee7.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.2.1_2c02c357d9b8d599912a4249d0bacb9da42ee485.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="cb86970df0f0f25f766d320b279c7858c1ca0003">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.android.support-cardview-v7-23.2.1_05b7053c9aabf35f86a87792115f9fbf86ecbed2.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-23.2.1_9649d34e69e91623bdfb0d2cbb8b8bfb02574075.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-location-8.3.0_f4c606fb3009f752edd4d8d4ff8ade5bf20812f8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Shimona\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho-okhttp\1.2.0\6c5c9380e245c4ff5be2b2a49dcbb0200c39798e\stetho-okhttp-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6c5c9380e245c4ff5be2b2a49dcbb0200c39798e">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\stetho-okhttp-1.2.0_ff16b0c05a864943573dfdcd4823b8015bb5c6d2.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2c6fcd6267cbac6509a2e72a61127534a1d616cf">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-games-8.3.0_07e0c4c9470ec2d881292139be45239cd1067b47.jar" />
+    </item>
+    <item
+        jar="C:\Users\Shimona\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.2.0\959c454243581fdf730abfd4f4745441724bcf2c\okhttp-2.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="959c454243581fdf730abfd4f4745441724bcf2c">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\okhttp-2.2.0_389e0a6d24219d6136c08312fdcd0bdcaa92bc74.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="af6ee25641df3142059c0828517aa7ee6eba08d6">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-analytics-8.3.0_463dab7dee46ee499ffa84a06a907f4c5bb623e6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Shimona\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.2.0\c0b52915a48fa91b1b94a28d4a2997bac5f524df\okio-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\okio-1.2.0_de8cfa8c131918d680db80e30a3c6eba190fec0d.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="744c49c02a27569cc4cc049685d3649e4ef439f2">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-panorama-8.3.0_55a0f8f6a606b3b8c9d9a072f0a50435c78673d6.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appindexing-8.3.0_d540a55b3518b1d0f4d455d2956db3b301d12473.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.android.support-design-23.2.1_d66e9604357206930aed24f7673ff7db36bdda93.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ea34579b1be157cd792376362157e9c54ebb4cd7">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-safetynet-8.3.0_4ad770c2556de3998c17b5bfc21a27edd74dfea3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Shimona\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\jsr305-2.0.1_5b96abf55adb400943cd1b0893f815bbceb684ea.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appinvite-8.3.0_ad9f1077a4e4d2560a5efe7597c654fe95c0897f.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="cb4af597d079ffdc0984a3ec2c03cbf6a1b9f869">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-cast-8.3.0_5222ac89da8b7de74ee58868f3f46b68da2a9797.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-maps-8.3.0_ac66ddd8b365fad05e37b9cf0eda513b7badcd6a.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9c9bdb4b2497465a6cf7d5e8f57c5298f828a380">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-wallet-8.3.0_d6392fd869aa1fcd363858a61966e597bf5095e2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Shimona\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.2.0\1d6cdb8ce8185b8b23213fad48a83987fb6d2d67\stetho-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1d6cdb8ce8185b8b23213fad48a83987fb6d2d67">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\stetho-1.2.0_f6d8f2637eb25f30a3a14b953055bb28cd42ca16.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="27775d59b16610ac76f1b83693fedd9520396332">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-ads-8.3.0_0221705cc05d46a4837b13ccd336187d2b12ad8c.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="eb576427887e497cd958a475475f9206e38dc314">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-nearby-8.3.0_874e0468fc7183a051d13ae1bc0999858568493a.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-measurement-8.3.0_971b146eb7e4baeb68ab00a20b120ff07a4b875a.jar" />
+    </item>
+    <item
+        jar="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="71eda10e33212e44245524b5087366ff8d805825">
+        <dex dex="D:\AndroidApps\Capstone\HelpDxApp\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-gcm-8.3.0_2aa44bdcea40bc14d220937feb1dbfe20650566c.jar" />
+    </item>
+
+</items>
