@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.view.View;
 import android.widget.ProgressBar;
 
 import app.com.work.shimonaj.helpdx.remote.Config;
@@ -22,11 +23,14 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class LoginPageActivity extends FragmentActivity {
     CompanyAuthFragment companyAuthFragment;
 
+
     private ProgressBar spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Utility.initAllFonts(this);
+
+
         boolean skipLogin=false;
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if(prefs!=null){
@@ -36,6 +40,10 @@ public class LoginPageActivity extends FragmentActivity {
         }
 
         if(skipLogin) {
+        //    spinner.setVisibility(View.VISIBLE);
+//            if (mInterstitialAd.isLoaded()) {
+//                mInterstitialAd.show();
+//            }
             Intent mainActivity = new Intent(this, MainActivity.class);
             startActivity(mainActivity);
             this.finish();
@@ -51,6 +59,7 @@ public class LoginPageActivity extends FragmentActivity {
                     .commit();
         }
     }
+
     public void swapFragment(){
         SignInFragment signInFragment = new SignInFragment();
 

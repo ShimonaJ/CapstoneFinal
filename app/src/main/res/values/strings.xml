@@ -49,5 +49,5 @@
     <string name="action_replycancel">Cancel</string>
     <string name="sync_account_type">helpdesk.tickets.com</string>
     <string name="content_authority">com.example.helpdx</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544~3347511713</string>
 </resources>

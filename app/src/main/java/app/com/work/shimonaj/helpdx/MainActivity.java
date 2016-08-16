@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -29,10 +30,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
+import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.ads.AdSize;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import app.com.work.shimonaj.helpdx.data.TicketAdapter;
 import app.com.work.shimonaj.helpdx.data.TicketLoader;
@@ -51,7 +58,7 @@ public class MainActivity extends AppCompatActivity
     public static  String SELECTED_LIST_POS_KEY="SelectedListPos";
     public  int mPosition;
     private BroadcastReceiver messageReciever;
-
+    AdView mAdView;
     public static final String MESSAGE_EVENT = "MESSAGE_EVENT";
     public static final String MESSAGE_KEY = "MESSAGE_EXTRA";
     @Override
@@ -82,6 +89,10 @@ public class MainActivity extends AppCompatActivity
 //                            host, holder.thumbnailView, holder.thumbnailView.getTransitionName()).toBundle());
             }
         });
+
+        MobileAds.initialize(getApplicationContext(),getString( R.string.banner_ad_unit_id));
+
+
         messageReciever = new MessageReciever();
         IntentFilter filter = new IntentFilter(MESSAGE_EVENT);
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReciever, filter);
@@ -292,14 +303,19 @@ public class MainActivity extends AppCompatActivity
         }
         return super.onOptionsItemSelected(item);
     }
+private void loadAd(){
+    AdView mAdView = (AdView) findViewById(R.id.adView);
+    AdRequest adRequest = new AdRequest.Builder().build();
+    mAdView.loadAd(adRequest);
 
+}
     private class MessageReciever extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent.getStringExtra(MESSAGE_KEY) != null) {
                 Snackbar.make(getCurrentFocus(),  intent.getStringExtra(MESSAGE_KEY), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
+loadAd();
             //    Toast.makeText(MainActivity.this, intent.getStringExtra(MESSAGE_KEY), Toast.LENGTH_LONG).show();
              //   Snackbar.make(findViewById(R.id.toolbar), intent.getStringExtra(MESSAGE_KEY), Snackbar.LENGTH_INDEFINITE);
 //                .setAction("Action", null).show();
