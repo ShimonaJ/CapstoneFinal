@@ -44,37 +44,11 @@ android:fitsSystemWindows="true"
 
     <include layout="@layout/content_main"  />
 
-
-    <!--<ImageButton-->
-    <!--android:id="@+id/fab"-->
-    <!--android:layout_width="56dp"-->
-    <!--android:layout_height="56dp"-->
-    <!--android:background="@drawable/oval_ripple"-->
-    <!--android:stateListAnimator="@anim/fab_raise"-->
-    <!--android:src="@drawable/fab_plus"-->
-    <!--android:elevation="6dp"-->
-    <!--android:layout_marginStart="19dp"-->
-    <!--android:layout_gravity="bottom|end"-->
-    <!--android:layout_marginTop="15dp" />-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-    <!--android:layout_height="wrap_content"  android:id="@+id/fabBtn"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:src="@drawable/fab_plus"-->
-    <!--app:fabSize="normal"-->
-    <!--app:elevation="6dp"-->
-    <!--app:pressedTranslationZ="12dp"-->
-    <!--app:borderWidth="0dp"-->
-    <!--app:layout_anchorGravity="bottom|right|end"-->
-    <!--android:layout_marginLeft="16dp"-->
-    <!--android:layout_marginRight="16dp"-->
-    <!--android:layout_gravity="bottom|end"/>-->
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        app:elevation="6dp"
+        app:elevation="6dp" 
         app:pressedTranslationZ="12dp"
         android:src="@drawable/fab_plus"
         android:layout_width="wrap_content"
