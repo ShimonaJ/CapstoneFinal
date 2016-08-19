@@ -21,6 +21,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.stetho.common.Util;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.BottomBarTab;
 import com.roughike.bottombar.OnTabClickListener;
@@ -39,6 +41,7 @@ import app.com.work.shimonaj.helpdx.util.Utility;
 public class TicketDetailActivity extends AppCompatActivity implements     LoaderManager.LoaderCallbacks<Cursor> {
    // private boolean mIsRefreshing = false;
     private static final int TICKET_DETAIL_LOADER=1;
+    Tracker mTracker;
     private TicketCommentsFragment commentFragment;
     private ReplyActivity replyFragment;
     private  Bundle arguments ;
@@ -51,7 +54,10 @@ public class TicketDetailActivity extends AppCompatActivity implements     Loade
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mTracker =((AnalyticsApplication) getApplication()).getDefaultTracker();
 
+        mTracker.setScreenName("Ticket Detail Activity" );
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
         if (savedInstanceState == null) {
             String ticketId = Utility.getValFromSharedPref(this,Config.TicketId);
 

@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
         Log.i(TAG, "Setting screen name: Main Activity" );
-        mTracker.setScreenName("Image~ Main Activity" );
+        mTracker.setScreenName("Main Activity" );
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 
         TicketSyncAdapter.initializeSyncAdapter(this);

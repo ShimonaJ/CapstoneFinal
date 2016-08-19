@@ -27,6 +27,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -40,7 +43,8 @@ import app.com.work.shimonaj.helpdx.util.Utility;
  */
 public class ReplyActivity extends AppCompatActivity  {
     private static final String TAG = ReplyActivity.class.getName();
-    private boolean mIsRefreshing = false;
+    Tracker mTracker;
+
     public ReplyActivity() {
         // Required empty public constructor
 
@@ -131,7 +135,10 @@ private void doReply(int actionType){
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.fragment_reply);
-     //   ticketId = getIntent().getStringExtra(TicketDetailFragment.TicketId);
+        mTracker =((AnalyticsApplication) getApplication()).getDefaultTracker();
+
+        mTracker.setScreenName("Reply Activity" );
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

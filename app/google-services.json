@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "183876294797",
+    "project_id": "helpdeskapp-9648d"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183876294797:android:9fb225b5fa4c22f7",
+        "android_client_info": {
+          "package_name": "app.com.work.shimonaj.helpdx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXSbXlDl24GvfT750kiYaWwrNYfLT6CzA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-82813415-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

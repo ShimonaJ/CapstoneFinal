@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -16,12 +17,15 @@ import app.com.work.shimonaj.helpdx.util.Utility;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class LoginPageActivity extends FragmentActivity {
     CompanyAuthFragment companyAuthFragment;
+    Tracker mTracker;
 
 
     private ProgressBar spinner;
@@ -30,7 +34,10 @@ public class LoginPageActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         Utility.initAllFonts(this);
 
+        mTracker =((AnalyticsApplication) getApplication()).getDefaultTracker();
 
+        mTracker.setScreenName("Login Activity" );
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
         boolean skipLogin=false;
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if(prefs!=null){
