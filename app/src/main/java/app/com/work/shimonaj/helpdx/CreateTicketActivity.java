@@ -56,7 +56,7 @@ public class CreateTicketActivity extends AppCompatActivity  {
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
         Log.i(TAG, "Setting screen name: Create Ticket" );
-        mTracker.setScreenName("Image~ Create Ticket" );
+        mTracker.setScreenName("Create Ticket" );
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 
     }
