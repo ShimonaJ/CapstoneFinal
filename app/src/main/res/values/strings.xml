@@ -50,4 +50,15 @@
     <string name="sync_account_type">helpdesk.tickets.com</string>
     <string name="content_authority">com.example.helpdx</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="create_ticket_btn">Click to create ticket</string>
+    <string name="notification_ticket_post">Ticket posted, this may take some time .</string>
+    <string name="notification_reply_post">Reply posted, this may take some time .</string>
+    <string name="networkIssue_ticketpost">Network issue, ticket might not have been created.</string>
+    <string name="notification_ticket_post_success">Ticket Posted Successfully, This will refresh in a while</string>
+    <string name="networkIssue_replypost">Network issue, Reply might not have been created.</string>
+    <string name="notification_reply_post_success">Reply Posted Successfully, This will refresh in a while</string>
+    <string name="networkIssue_ticketFetch">No Network, latest tickets not fetched.</string>
+    <string name="notification_ticket_fetch_success">Latest tickets fetched</string>
+
 </resources>

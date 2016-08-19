@@ -19,6 +19,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import app.com.work.shimonaj.helpdx.MainActivity;
+import app.com.work.shimonaj.helpdx.R;
 import app.com.work.shimonaj.helpdx.remote.Config;
 import app.com.work.shimonaj.helpdx.remote.RemoteEndpointUtil;
 import app.com.work.shimonaj.helpdx.util.Utility;
@@ -145,11 +146,11 @@ public class UpdaterService extends IntentService {
          RemoteEndpointUtil.postTicket(str);
             //sendStickyBroadcast(new Intent(TICKET_POST).putExtra(EXTRA_REFRESHING, false));
     } catch (IOException  e) {
-            broadcastMessage("Network issue, ticket might not have been created.");
+            broadcastMessage(getResources().getString(R.string.networkIssue_ticketpost));
          //   setBookStatus(this,TICKET_STATUS_SERVER_DOWN);
         Log.e(TAG, "Error posting ticket.", e);
     }
-        broadcastMessage("Ticket Posted Successfully, This will refresh in a while");
+        broadcastMessage(getResources().getString(R.string.notification_ticket_post_success));
       //  setBookStatus(this,TICKET_STATUS_OK);
     }
     private void postComment(String str){
@@ -161,11 +162,13 @@ public class UpdaterService extends IntentService {
           //  sendStickyBroadcast(
           //          new Intent(TICKET_COMMENT_POST).putExtra(EXTRA_REFRESHING, false));
         } catch (IOException  e) {
-            broadcastMessage("Network issue, reply might not have been posted.");
+            broadcastMessage(getResources().getString(R.string.networkIssue_replypost));
+
             Log.e(TAG, "Error posting comment.", e);
          //   setBookStatus(this,TICKET_STATUS_SERVER_DOWN);
         }
-        broadcastMessage("Reply Posted Successfully, This will refresh in a while");
+        broadcastMessage(getResources().getString(R.string.notification_reply_post_success));
+
        // setBookStatus(this,TICKET_STATUS_OK);
     }
     private void doLogout(){
@@ -226,10 +229,11 @@ public class UpdaterService extends IntentService {
 
         } catch (JSONException | RemoteException | OperationApplicationException e) {
            // setBookStatus(this, TICKET_STATUS_SERVER_INVALID);
-            broadcastMessage("No Network, latest tickets not fetched.");
+
+            broadcastMessage(getResources().getString(R.string.networkIssue_ticketFetch));
             Log.e(TAG, "Error updating content.", e);
         }
-        broadcastMessage("Latest tickets fetched.");
+        broadcastMessage(getResources().getString(R.string.notification_ticket_fetch_success));
         updateWidgets();
      //   setBookStatus(this,TICKET_STATUS_OK);
      //   sendStickyBroadcast(
@@ -307,17 +311,12 @@ public class UpdaterService extends IntentService {
 
             //  time.parse3339(object.getString("CreatedOn"));
             values.put(ItemsContract.Items.CREATEDON, dataObj.getString("CreatedOn"));
-            //  time.parse3339(object.getString("CreatedOn"));
-
-            //  cpo.add(ContentProviderOperation.newInsert(dirUri).withValues(values).build());
-            // }
-
 
             getContentResolver().update(dirUri, values,"",null);
 
         } catch (JSONException e) {
             Log.e(TAG, "Error updating content.", e);
-            broadcastMessage("Error Occured while decoding server resposne.");
+          //  broadcastMessage("Error Occured while decoding server resposne.");
 
            // setBookStatus(this,TICKET_STATUS_SERVER_INVALID);
         }
@@ -352,55 +351,13 @@ public class UpdaterService extends IntentService {
         } catch (JSONException | RemoteException | OperationApplicationException e) {
             Log.e(TAG, "Error updating content.", e);
            // setBookStatus(this,TICKET_STATUS_SERVER_INVALID);
-            broadcastMessage("No Network, latest ticket details not fetched.");
+            broadcastMessage(getResources().getString(R.string.networkIssue_ticketFetch));
 
         }
         //setBookStatus(this,TICKET_STATUS_OK);
-        broadcastMessage("Latest ticket details fetched.");
+        broadcastMessage(getResources().getString(R.string.notification_ticket_fetch_success));
 
 
-     //   sendStickyBroadcast(
-       //         new Intent(TICKET_DETAIL).putExtra(EXTRA_REFRESHING, false));
     }
-//    private void getTicketComments(long ticketId){
-//        sendStickyBroadcast(
-//                new Intent(TICKET_COMMENTS).putExtra(EXTRA_REFRESHING, true));
-//
-//        // Don't even inspect the intent, we only do one thing, and that's fetch content.
-//        ArrayList<ContentProviderOperation> cpo = new ArrayList<ContentProviderOperation>();
-//        Uri dirUri = ItemsContract.Comments.buildCommentUri(ticketId);
-//
-//        try {
-//         JSONArray array = RemoteEndpointUtil.fetchTicketComments(ticketId);
-//
-//            if (array == null) {
-//                throw new JSONException("Invalid parsed item array");
-//            }
-//            // Delete all items
-//
-//                cpo.add(ContentProviderOperation.newDelete(dirUri).build());
-//
-//                for (int i = 0; i < array.length(); i++) {
-//                    ContentValues values = new ContentValues();
-//                    JSONObject object = array.getJSONObject(i);
-//                    if (object.getInt("IsPrivate") == 0) {
-//                        values.put(ItemsContract.Comments.TICKETID, ticketId);
-//                        values.put(ItemsContract.Comments.COMMENT, object.getString("Comments"));
-//                        values.put(ItemsContract.Comments.COMMENTEDBY, object.getString("CreatedByEmpName"));
-//                        values.put(ItemsContract.Comments.COMMENTEDON, object.getString("CreatedOn"));
-//
-//                        cpo.add(ContentProviderOperation.newInsert(dirUri).withValues(values).build());
-//                    }
-//
-//                }
-//                getContentResolver().applyBatch(ItemsContract.CONTENT_AUTHORITY, cpo);
-//
-//
-//        } catch (JSONException | RemoteException | OperationApplicationException e) {
-//            Log.e(TAG, "Error updating content.", e);
-//        }
-//
-//        sendStickyBroadcast(
-//                new Intent(TICKET_COMMENTS).putExtra(EXTRA_REFRESHING, false));
-//    }
+
 }

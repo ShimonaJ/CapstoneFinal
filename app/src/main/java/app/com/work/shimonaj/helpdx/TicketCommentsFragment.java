@@ -32,10 +32,10 @@ import app.com.work.shimonaj.helpdx.util.Utility;
  */
 public class TicketCommentsFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>  {
 
-    //private SwipeRefreshLayout mSwipeRefreshLayout;
+
     private RecyclerView mRecyclerView;
     private static final int TICKET_COMMENTS_LOADER=101;
-    private boolean mIsRefreshing = false;
+
     public TicketCommentsFragment() {
         // Required empty public constructor
     }
@@ -49,22 +49,11 @@ public class TicketCommentsFragment extends Fragment implements LoaderManager.Lo
       //  mSwipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.swipe_refresh_layout);
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.commentsList);
 
-//        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener()
-//        {
-//            @Override
-//            public void onRefresh()
-//            {
-//                refresh();
-//            }
-//        });
-       // setHasOptionsMenu(true);
-
         if (savedInstanceState == null) {
 
             getLoaderManager().initLoader(TICKET_COMMENTS_LOADER, null, this);
         }
-     //  getActivity().registerReceiver(mRefreshingReceiver,
-     //           new IntentFilter(UpdaterService.TICKET_COMMENTS));
+
         return rootView;
     }
     private void refresh() {
@@ -73,22 +62,6 @@ public class TicketCommentsFragment extends Fragment implements LoaderManager.Lo
         getActivity().startService(intent);
         //  startService(new Intent(this, UpdaterService.class));
     }
-//    private BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//            if (UpdaterService.TICKET_COMMENTS.equals(intent.getAction())) {
-//                mIsRefreshing = intent.getBooleanExtra(UpdaterService.EXTRA_REFRESHING, false);
-//                //updateRefreshingUI();
-//if(!mIsRefreshing){
-//    getActivity().unregisterReceiver(mRefreshingReceiver);
-//}
-//
-//            }
-//        }
-//    };
-//    private void updateRefreshingUI() {
-//        mSwipeRefreshLayout.setRefreshing(mIsRefreshing);
-//    }
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         String ticketId = Utility.getValFromSharedPref(getActivity(), Config.TicketId);
@@ -110,22 +83,5 @@ public class TicketCommentsFragment extends Fragment implements LoaderManager.Lo
     public void onLoaderReset(Loader<Cursor> loader) {
         mRecyclerView.setAdapter(null);
     }
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.action_reply) {
-//            Intent replyActivityIntent = new Intent(getActivity(), ReplyActivity.class);
-//            replyActivityIntent.putExtra(TicketDetailFragment.TicketId,getArguments().getString(TicketDetailFragment.TicketId) );
-//
-//            startActivity(replyActivityIntent);
-//
-////            Intent intent = new Intent(this, MainActivity.class);
-////            intent.putExtra("ticketId",Long.parseLong(ticketId));
-////            intent.setAction(UpdaterService.TICKET_DETAIL);
-////            startService(intent);
-////            navigateUpTo(new Intent(this, MainActivity.class));
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
+
 }

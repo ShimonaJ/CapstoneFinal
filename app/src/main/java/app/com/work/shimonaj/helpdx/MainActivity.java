@@ -40,6 +40,8 @@ import com.google.ads.AdSize;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import app.com.work.shimonaj.helpdx.data.TicketAdapter;
 import app.com.work.shimonaj.helpdx.data.TicketLoader;
@@ -57,6 +59,8 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView mRecyclerView;
     public static  String SELECTED_LIST_POS_KEY="SelectedListPos";
     public  int mPosition;
+    Tracker mTracker;
+
     private BroadcastReceiver messageReciever;
     AdView mAdView;
     public static final String MESSAGE_EVENT = "MESSAGE_EVENT";
@@ -67,7 +71,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-       // ((TextView)findViewById(R.id.toolbar_title)).setTypeface(Utility.mediumRobotoFont);
+        AnalyticsApplication application = (AnalyticsApplication) getApplication();
+        mTracker = application.getDefaultTracker();
+        Log.i(TAG, "Setting screen name: Main Activity" );
+        mTracker.setScreenName("Image~ Main Activity" );
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 
         TicketSyncAdapter.initializeSyncAdapter(this);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
@@ -97,21 +105,9 @@ public class MainActivity extends AppCompatActivity
         IntentFilter filter = new IntentFilter(MESSAGE_EVENT);
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReciever, filter);
         if (findViewById(R.id.ticket_detail_container) != null) {
-            // The detail container view will be present only in the
-            // large-screen layouts (res/values-w900dp).
-            // If this view is present, then the
-            // activity should be in two-pane mode.
+
             Config.mTwoPane = true;
         }
-
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.setDrawerListener(toggle);
-//        toggle.syncState();
-//
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(this);
 
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener()
         {
@@ -149,37 +145,6 @@ public class MainActivity extends AppCompatActivity
 
         super.onPause();
     }
-//    private void updateOnResponse() {
-//
-//
-//
-//        // if cursor is empty, why? do we have an invalid location
-//       // int message = 0;
-//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-//
-//        int bookstatus = prefs.getInt(Config.TICKET_STATUS, 0);
-//        mIsRefreshing = false;
-//        updateRefreshingUI();
-//        if(bookstatus==UpdaterService.TICKET_STATUS_OK){
-//            Toast.makeText(getApplicationContext(),"Latest tickets fetched.",Toast.LENGTH_LONG).show();
-////            Intent mainActivityIntent = new Intent(getApplicationContext(), MainActivity.class);
-////            startActivity(mainActivityIntent);
-////            makeSnackbar();
-//        }else
-//        if(bookstatus==UpdaterService.TICKET_STATUS_SERVER_DOWN){
-//
-//            Toast.makeText(getApplicationContext(),"No Network, latest tickets not fetched.",Toast.LENGTH_LONG).show();
-//
-//        }
-//        if(bookstatus==UpdaterService.TICKET_STATUS_SERVER_INVALID){
-//
-//            Toast.makeText(getApplicationContext(),"Server Down.",Toast.LENGTH_LONG).show();
-//
-//        }
-//        else {
-//            Toast.makeText(getApplicationContext(),"Unknown error."+bookstatus,Toast.LENGTH_LONG).show();
-//        }
-//    }
     @Override
     protected void onDestroy() {
 
@@ -188,8 +153,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void refresh() {
-//        registerReceiver(mRefreshingReceiver,
-//                new IntentFilter(UpdaterService.BROADCAST_ACTION_STATE_CHANGE));
 
         mIsRefreshing=true;
         updateRefreshingUI();
@@ -201,41 +164,13 @@ public class MainActivity extends AppCompatActivity
 
       //  startService(new Intent(this, UpdaterService.class));
     }
-//    @Override
-//    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-//        if ( key.equals(Config.TICKET_STATUS) ) {
-//            updateOnResponse();
-//        }
-//    }
-
-//    private BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//            if (UpdaterService.BROADCAST_ACTION_STATE_CHANGE.equals(intent.getAction())) {
-//                mIsRefreshing = intent.getBooleanExtra(UpdaterService.EXTRA_REFRESHING, false);
-//                updateRefreshingUI();
-//if(!mIsRefreshing){
-//    unregisterReceiver(mRefreshingReceiver);
-//}
-//
-//            }
-//        }
-//    };
     private void updateRefreshingUI() {
         mSwipeRefreshLayout.setRefreshing(mIsRefreshing);
     }
 
 
     private boolean mIsRefreshing = false;
-//    @Override
-//    public void onBackPressed() {
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        if (drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
-//            super.onBackPressed();
-//        }
-//    }
+
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         return TicketLoader.newAllArticlesInstance(this);
@@ -315,10 +250,8 @@ private void loadAd(){
             if (intent.getStringExtra(MESSAGE_KEY) != null) {
                 Snackbar.make(getCurrentFocus(),  intent.getStringExtra(MESSAGE_KEY), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-loadAd();
-            //    Toast.makeText(MainActivity.this, intent.getStringExtra(MESSAGE_KEY), Toast.LENGTH_LONG).show();
-             //   Snackbar.make(findViewById(R.id.toolbar), intent.getStringExtra(MESSAGE_KEY), Snackbar.LENGTH_INDEFINITE);
-//                .setAction("Action", null).show();
+                loadAd();
+
             }
         }
     }

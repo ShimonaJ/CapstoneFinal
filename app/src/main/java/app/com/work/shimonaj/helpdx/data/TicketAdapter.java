@@ -99,16 +99,18 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketViewHolder> {
         holder.positionId.setText(String.valueOf(position));
         holder.createdOn.setText(mCursor.getString(TicketLoader.Query.CREATEDON));
         holder.createdOn.setTypeface(Utility.regularRobotoFont);
-        String assignedTo =mCursor.getString(TicketLoader.Query.ASSIGNEDTO);
+
        //String concat = assignedTo==""?"":" ,"+assignedTo;
         String cat =mCursor.getString(TicketLoader.Query.CATEGORYNAME);
         holder.category.setText(cat.equals("")?"No Category":cat);
-        holder.assignedTo.setText(mCursor.getString(TicketLoader.Query.ASSIGNEDTO));
+
         String assign =mCursor.getString(TicketLoader.Query.ASSIGNEDTO);
         holder.assignedTo.setText(assign.equals("")?"Unassigned":assign);
 
         holder.category.setTypeface(Utility.regularRobotoFont);
         holder.assignedTo.setTypeface(Utility.regularRobotoFont);
+        holder.mView.setContentDescription("Ticket Id  "+mCursor.getString(TicketLoader.Query.TICKETID)+", with title "+mCursor.getString(TicketLoader.Query.TITLE)+" is in "+stagename+" status , and assigned to "+(assign.equals("")?"Admin":assign));
+
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @TargetApi(Build.VERSION_CODES.M)
             @Override
@@ -117,22 +119,7 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketViewHolder> {
                     Bundle arguments = new Bundle();
                     arguments.putString(Config.TicketId, holder.ticketId.getText().toString());
 
-//                    TicketDetailFragment fragment = new TicketDetailFragment();
-//                    fragment.setArguments(arguments);
-////                    host.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(
-////                            host, holder.thumbnailView, holder.thumbnailView.getTransitionName()).toBundle());
-//
-//
-//
-//                    host.getFragmentManager()
-//                            .beginTransaction()
-//                            .addSharedElement(holder.stageImg, "stageTransition")
-//                            .replace(R.id.ticket_detail_container, fragment)
-//                            .addToBackStack(null)
-//                            .commit();
                 } else {
-
-
 
                     final  Context context = v.getContext();
                     final Intent intent = new Intent(context, TicketDetailActivity.class);
@@ -140,12 +127,6 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketViewHolder> {
                     Utility.putKeyValInSharedPref(context,MainActivity.SELECTED_LIST_POS_KEY,holder.positionId.getText().toString());
                     context.startActivity(intent);
 
-
-
-
-
-//                    context.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(
-//                            host, holder.stageImg, holder.stageImg.getTransitionName()).toBundle());
 
                 }
             }

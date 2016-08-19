@@ -59,17 +59,6 @@ public class SignInFragment extends Fragment {
             ((TextView)rootView.findViewById(R.id.companyName)).setText(company_name);
         }
 
-//        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-//                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-//                    attemptLogin();
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
-
         Button mEmailSignInButton = (Button) rootView.findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override

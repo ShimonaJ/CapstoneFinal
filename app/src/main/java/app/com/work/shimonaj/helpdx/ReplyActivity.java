@@ -59,15 +59,13 @@ public class ReplyActivity extends AppCompatActivity  {
         switch (item.getItemId()) {
             case android.R.id.home:goToTicketDetailView(); return true;
             case R.id.action_reply:
-doReply(0);
-               // Toast.makeText(getActivity(),"Reply clicked",Toast.LENGTH_SHORT);
-                return true;
+                    doReply(0);return true;
 
-            case R.id.action_reply_close:doReply(1);
-             //   Toast.makeText(getActivity(),"Reply and close clicked",Toast.LENGTH_SHORT);
-                return true;
-            case R.id.action_cancel:goToTicketDetailView();
-                //   Toast.makeText(getActivity(),"Reply and close clicked",Toast.LENGTH_SHORT);
+            case R.id.action_reply_close:
+                    doReply(1);return true;
+            case R.id.action_cancel:
+                goToTicketDetailView();
+
                 return true;
             default:
                 // If we got here, the user's action was not recognized.
@@ -78,8 +76,9 @@ doReply(0);
     }
     //private String ticketId="";
 private void doReply(int actionType){
-    Toast.makeText(this, "Reply posted, this may take some time .", Toast.LENGTH_LONG).show();
-    Log.v(TAG,"Button click");
+    Toast.makeText(this,     getResources().getString(R.string.notification_reply_post)
+            , Toast.LENGTH_LONG).show();
+
     JSONObject userObj = Utility.getUserInfo(this);
     String EmpId="";
 
@@ -113,29 +112,9 @@ private void doReply(int actionType){
     goToTicketDetailView();
 
 }
-//    private BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//            if (UpdaterService.TICKET_COMMENT_POST.equals(intent.getAction())) {
-//                mIsRefreshing = intent.getBooleanExtra(UpdaterService.EXTRA_REFRESHING, false);
-//                //updateRefreshingUI();
-//                if(!mIsRefreshing) {
-//                    unregisterReceiver(mRefreshingReceiver);
-//                    //Toast.makeText(getActivity(),"Ticket Created Successfully, This will refresh in a while",Toast.LENGTH_LONG);
-////                    ((TicketDetailActivity)).onReplyDone(getArguments().getString(TicketDetailFragment.TicketId));
-////                    Snackbar.make(getView(), "Reply Send Successfully, This will refresh in a while", Snackbar.LENGTH_LONG)
-////                            .setAction("Action", null).show();
-//
-//
-//                }
-//
-//
-//            }
-//        }
-//    };
+
     private void goToTicketDetailView(){
         Intent detailActivityIntent = new Intent(getApplicationContext(), TicketDetailActivity.class);
-      //  detailActivityIntent.putExtra(TicketDetailFragment.TicketId,ticketId );
 
         startActivity(detailActivityIntent);
         this.finish();
@@ -157,71 +136,8 @@ private void doReply(int actionType){
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-       //setHasOptionsMenu(true);
+
     }
 
-
-//    private void updateOnResponse() {
-//
-//
-//
-//        // if cursor is empty, why? do we have an invalid location
-//        int message = 0;
-//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-//
-//        int bookstatus = prefs.getInt(Config.TICKET_STATUS, 0);
-//
-//        Log.v(TAG,"Reply Activity: Response recieved "+bookstatus);
-//        if(bookstatus==UpdaterService.TICKET_STATUS_SERVER_DOWN){
-//
-//            Toast.makeText(getApplicationContext(),"No Network, reply will not be posted.",Toast.LENGTH_LONG).show();
-//
-//        }else  if(bookstatus==UpdaterService.TICKET_STATUS_INVALID){
-//
-//            Toast.makeText(getApplicationContext(),"No Network, reply will not be posted.",Toast.LENGTH_LONG).show();
-//
-//        }else  if(bookstatus==UpdaterService.TICKET_STATUS_OK){
-//            Toast.makeText(getApplicationContext(),"Ticket Posted Successfully, This will refresh in a while",Toast.LENGTH_LONG).show();
-//
-//
-//        }else {
-//            Toast.makeText(getApplicationContext(),"Unknown error."+bookstatus,Toast.LENGTH_LONG).show();
-//        }
-//        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-//        sp.unregisterOnSharedPreferenceChangeListener(this);
-//    }
-//    @Override
-//    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-//
-//
-//        if ( key.equals(Config.TICKET_STATUS) ) {
-//            Log.v(TAG,"********************* yup ");
-//            updateOnResponse();
-//        }
-//    }
-
-
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        View rootView =inflater.inflate(R.layout.fragment_reply, container, false);
-//// getActivity().setTheme(R.style.ReplyTheme);
-//        setHasOptionsMenu(true);
-////        TextView titleView =(TextView)getActivity().findViewById(R.id.detail_title);
-////        titleView.setText( "");
-//
-//        TextView subTitleView =(TextView)getActivity().findViewById(R.id.detail_subtitle);
-//        subTitleView.setVisibility(View.INVISIBLE);
-//        subTitleView.setText(  "");
-//
-////
-//        TextView descView =(TextView)getActivity().findViewById(R.id.detail_desc);
-//        descView.setVisibility(View.INVISIBLE);
-//        descView.setText("");
-//
-//        return rootView;
-//    }
 
 }

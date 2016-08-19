@@ -21,6 +21,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,7 +33,7 @@ import app.com.work.shimonaj.helpdx.util.Utility;
 
 public class CreateTicketActivity extends AppCompatActivity  {
     private static final String TAG = CreateTicketActivity.class.getName();
-    private boolean mIsRefreshing = false;
+    Tracker mTracker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,14 +53,24 @@ public class CreateTicketActivity extends AppCompatActivity  {
             }
 
         });
+        AnalyticsApplication application = (AnalyticsApplication) getApplication();
+        mTracker = application.getDefaultTracker();
+        Log.i(TAG, "Setting screen name: Create Ticket" );
+        mTracker.setScreenName("Image~ Create Ticket" );
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+
     }
 
     public void onCreateTicketClick(View view) {
-        Toast.makeText(this, "Ticket posted, this may take some time .", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getResources().getString(R.string.notification_ticket_post), Toast.LENGTH_LONG).show();
         Log.v(TAG,"Button click");
         JSONObject userObj = Utility.getUserInfo(getApplicationContext());
         String EmpId="";
         String CompanyId="";
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Ticket Created")
+                .setAction("Share")
+                .build());
 
         try{
             CompanyId = userObj.getString("CompanyId");
@@ -83,10 +96,6 @@ public class CreateTicketActivity extends AppCompatActivity  {
             e.printStackTrace();
         }
 
-
-
-//        registerReceiver(mRefreshingReceiver,
-//                    new IntentFilter(UpdaterService.TICKET_POST));
         Intent intent = new Intent(this, UpdaterService.class);
         intent.putExtra("ticketData",json.toString());
         intent.setAction(UpdaterService.TICKET_POST);
@@ -97,55 +106,4 @@ public class CreateTicketActivity extends AppCompatActivity  {
     }
 
 
-//
-//    private void updateEmptyView() {
-//
-//
-//
-//            // if cursor is empty, why? do we have an invalid location
-//            int message = 0;
-//            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-//
-//            int bookstatus = prefs.getInt(Config.TICKET_STATUS, 0);
-//         if(bookstatus==UpdaterService.TICKET_STATUS_SERVER_DOWN){
-//
-//             Toast.makeText(getApplicationContext(),"No Network, ticket will not be created.",Toast.LENGTH_LONG).show();
-//
-//        }else  if(bookstatus==UpdaterService.TICKET_STATUS_OK){
-//
-//
-//             makeSnackbar();
-//         } else {
-//             Toast.makeText(getApplicationContext(),"Unknown error."+bookstatus,Toast.LENGTH_LONG).show();
-//         }
-//    }
-
-
-
-//    private void makeSnackbar(){
-//        Toast.makeText(getApplicationContext(),"Ticket Posted Successfully, This will refresh in a while",Toast.LENGTH_LONG).show();;
-////        Snackbar.make(getCurrentFocus(), "Ticket Created Successfully, This will refresh in a while", Snackbar.LENGTH_INDEFINITE)
-////                .setAction("Action", null).show();
-//    }
-//    private BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//            if (UpdaterService.TICKET_POST.equals(intent.getAction())) {
-//
-//                mIsRefreshing = intent.getBooleanExtra(UpdaterService.EXTRA_REFRESHING, false);
-//                //updateRefreshingUI();
-//                if(!mIsRefreshing) {
-//                    unregisterReceiver(mRefreshingReceiver);
-//                  //  Toast.makeText(getApplicationContext(),"Ticket Created Successfully, This will refresh in a while",Toast.LENGTH_LONG);
-//
-//                    Intent mainActivityIntent = new Intent(getApplicationContext(), MainActivity.class);
-//                    startActivity(mainActivityIntent);
-//                    makeSnackbar();
-//
-//                }
-//
-//
-//            }
-//        }
-//    };
 }

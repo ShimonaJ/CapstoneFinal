@@ -119,66 +119,6 @@ public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
 
     }
 
-//    private void updateOnResponse() {
-//        // if cursor is empty, why? do we have an invalid location
-//        // int message = 0;
-//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-//
-//        int bookstatus = prefs.getInt(Config.TICKET_STATUS, 0);
-//        if(bookstatus==UpdaterService.TICKET_STATUS_SERVER_DOWN){
-//
-//            Toast.makeText(getApplicationContext(),"No Network, ticket detail not fetched.",Toast.LENGTH_LONG).show();
-//            //mIsRefreshing = false;
-//            //updateRefreshingUI();
-//        }else if(bookstatus==UpdaterService.TICKET_STATUS_SERVER_INVALID){
-//
-//            Toast.makeText(getApplicationContext(),"Server down.",Toast.LENGTH_LONG).show();
-//            //mIsRefreshing = false;
-//            //updateRefreshingUI();
-//        }
-//        else  if(bookstatus==UpdaterService.TICKET_STATUS_OK){
-//            Toast.makeText(getApplicationContext(),"Latest ticket details fetched.",Toast.LENGTH_LONG).show();
-//          //  mIsRefreshing = false;
-//
-//        } else {
-//            Toast.makeText(getApplicationContext(),"Unknown error."+bookstatus,Toast.LENGTH_LONG).show();
-//        }
-//    }
-//    @Override
-//    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-//        if ( key.equals(Config.TICKET_STATUS) ) {
-//            updateOnResponse();
-//        }
-//    }
-//
-//    private BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//            if (UpdaterService.TICKET_DETAIL.equals(intent.getAction())) {
-//                mIsRefreshing = intent.getBooleanExtra(UpdaterService.EXTRA_REFRESHING, false);
-//                //updateRefreshingUI();
-//                if(!mIsRefreshing) {
-//                  //  unregisterReceiver(mRefreshingReceiver);
-//
-//                   commentFragment = new TicketCommentsFragment();
-//                   // commentFragment.setArguments(arguments);
-//
-//                    TicketDetailFragment fragment = new TicketDetailFragment();
-//
-//                   // fragment.setArguments(arguments);
-//                    getFragmentManager().beginTransaction()
-//                            .add( fragment,"ticketDetailFrag")
-//                            .add( R.id.ticket_comment_container,commentFragment)
-//                            .commit();
-//                    unregisterReceiver(mRefreshingReceiver);
-////                    Snackbar.make(getCurrentFocus(), "Ticket Created Successfully", Snackbar.LENGTH_LONG)
-////                            .setAction("Action", null).show();
-//                }
-//
-//
-//            }
-//        }
-//    };
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -194,11 +134,6 @@ public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
 
             startActivity(replyActivityIntent);
 
-//            Intent intent = new Intent(this, MainActivity.class);
-//            intent.putExtra("ticketId",Long.parseLong(ticketId));
-//            intent.setAction(UpdaterService.TICKET_DETAIL);
-//            startService(intent);
-//            navigateUpTo(new Intent(this, MainActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

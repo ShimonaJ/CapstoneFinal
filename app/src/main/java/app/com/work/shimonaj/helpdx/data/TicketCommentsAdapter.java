@@ -93,6 +93,8 @@ public class TicketCommentsAdapter  extends RecyclerView.Adapter<TicketCommentVi
         holder.commentedByView.setTypeface(Utility.mediumRobotoFont);
 
         holder.commentTextView.setTypeface(Utility.regularRobotoFont);
+
+        holder.itemView.setContentDescription(mCursor.getString(TicketCommentsLoader.Query.COMMENTEDBY)+" replied on "+mCursor.getString(TicketCommentsLoader.Query.COMMENTEDON)+", said "+mCursor.getString(TicketCommentsLoader.Query.COMMENT));
     }
 
     @Override

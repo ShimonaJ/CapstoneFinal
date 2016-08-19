@@ -40,10 +40,7 @@ public class LoginPageActivity extends FragmentActivity {
         }
 
         if(skipLogin) {
-        //    spinner.setVisibility(View.VISIBLE);
-//            if (mInterstitialAd.isLoaded()) {
-//                mInterstitialAd.show();
-//            }
+
             Intent mainActivity = new Intent(this, MainActivity.class);
             startActivity(mainActivity);
             this.finish();
@@ -63,18 +60,8 @@ public class LoginPageActivity extends FragmentActivity {
     public void swapFragment(){
         SignInFragment signInFragment = new SignInFragment();
 
-
-
-        // Replace whatever is in the fragment_container view with this fragment,
-        // and add the transaction to the back stack so the user can navigate back
         getFragmentManager().beginTransaction().replace(R.id.loginContainer, signInFragment).addToBackStack(null).commit();
 
-
-//        getFragmentManager().beginTransaction()
-//                .remove(companyAuthFragment)
-//                .add(R.id.loginContainer, signInFragment)
-//                .addToBackStack(null)
-//                .commit();
     }
     @Override
     public void onBackPressed() {
